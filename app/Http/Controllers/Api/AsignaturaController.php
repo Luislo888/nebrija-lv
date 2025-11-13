@@ -10,12 +10,7 @@ use Illuminate\Support\Facades\Log;
 
 class AsignaturaController extends Controller
 {
-    /**
-     * Obtener asignaturas de un estudio específico
-     * 
-     * @param AsignaturaRequest $request
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection|\Illuminate\Http\JsonResponse
-     */
+    /* @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection|\Illuminate\Http\JsonResponse */
     public function index(AsignaturaRequest $request)
     {
         try {

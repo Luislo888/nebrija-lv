@@ -10,12 +10,7 @@ use Illuminate\Support\Facades\Log;
 
 class EstudioController extends Controller
 {
-    /**
-     * Obtener todos los estudios ordenados por nombre
-     * Los resultados se cachean por 1 hora ya que los estudios cambian poco
-     *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
-     */
+    /* @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection */
     public function index()
     {
         try {

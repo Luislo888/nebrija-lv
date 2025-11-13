@@ -11,15 +11,7 @@ use Illuminate\Support\Facades\Log;
 
 class MatriculacionController extends Controller
 {
-    /**
-     * Obtener matriculaciones con paginación y ordenación
-     *
-     * OPTIMIZACIÓN: Usa Query Builder con JOINs en lugar de Eloquent para evitar N+1 queries
-     * y mejorar el rendimiento al obtener datos de múltiples tablas relacionadas
-     *
-     * @param MatriculacionRequest $request
-     * @return \Illuminate\Http\JsonResponse
-     */
+    /* @return \Illuminate\Http\JsonResponse */
 
     public function index(MatriculacionRequest $request)
     {

@@ -8,20 +8,14 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    /**
-     * The list of the inputs that are never flashed for validation exceptions.
-     *
-     * @var array<int, string>
-     */
+    /* @var array<int, string> */
     protected $dontFlash = [
         'current_password',
         'password',
         'password_confirmation',
     ];
 
-    /**
-     * Register the exception handling callbacks for the application.
-     */
+    /* Registrar los callbacks de manejo de excepciones para la aplicación. */
     public function register(): void
     {
         $this->reportable(function (Throwable $e) {
@@ -29,9 +23,7 @@ class Handler extends ExceptionHandler
         });
     }
 
-    /**
-     * Render an exception into an HTTP response.
-     */
+    /* Renderizar una excepción en una respuesta HTTP. */
     public function render($request, Throwable $exception)
     {
         // Si es una excepción de validación y es una petición a API, devolver JSON

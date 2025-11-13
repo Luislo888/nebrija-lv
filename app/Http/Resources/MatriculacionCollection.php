@@ -7,11 +7,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class MatriculacionCollection extends ResourceCollection
 {
-    /**
-     * Transform the resource collection into an array.
-     *
-     * @return array<int|string, mixed>
-     */
+    /* @return array<int|string, mixed> */
     public function toArray(Request $request): array
     {
         $currentPage = $this->currentPage();
@@ -28,9 +24,7 @@ class MatriculacionCollection extends ResourceCollection
         ];
     }
 
-    /**
-     * Disable the wrapping of the outer-most resource array.
-     */
+    /* Deshabilitar el envoltorio del array de recursos más externo. */
     public function withResponse($request, $response): void
     {
         $data = $response->getData(true);

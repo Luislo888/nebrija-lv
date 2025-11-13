@@ -9,27 +9,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Estudio extends Model
 {
     use HasFactory;
-    /**
-     * Tabla asociada al modelo
-     *
-     * @var string
-     */
+    /* @var string */
     protected $table = 'estudio';
 
-    /**
-     * Atributos que pueden ser asignados masivamente
-     *
-     * @var array<int, string>
-     */
+    /* @var array<int, string> */
     protected $fillable = [
         'nombre',
     ];
 
-    /**
-     * Relación: Un Estudio tiene muchas Asignaturas
-     *
-     * @return HasMany
-     */
+    /* @return HasMany */
     public function asignaturas(): HasMany
     {
         return $this->hasMany(Asignatura::class, 'idEstudio');

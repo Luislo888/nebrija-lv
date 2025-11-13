@@ -10,12 +10,7 @@ use Illuminate\Support\Facades\Log;
 
 class AlumnoController extends Controller
 {
-    /**
-     * Obtener alumnos con paginación y ordenación
-     * 
-     * @param AlumnoRequest $request
-     * @return \Illuminate\Http\JsonResponse
-     */
+    /* @return \Illuminate\Http\JsonResponse */
     public function index(AlumnoRequest $request)
     {
         try {

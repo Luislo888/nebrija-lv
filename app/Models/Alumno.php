@@ -9,27 +9,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Alumno extends Model
 {
     use HasFactory;
-    /**
-     * Tabla asociada al modelo
-     *
-     * @var string
-     */
+    /* @var string */
     protected $table = 'alumno';
 
-    /**
-     * Atributos que pueden ser asignados masivamente
-     *
-     * @var array<int, string>
-     */
+    /* @var array<int, string> */
     protected $fillable = [
         'nombre',
     ];
 
-    /**
-     * Relación: Un Alumno tiene muchas Asignaturas (relación N:M)
-     *
-     * @return BelongsToMany
-     */
+    /* @return BelongsToMany */
     public function asignaturas(): BelongsToMany
     {
         return $this->belongsToMany(
